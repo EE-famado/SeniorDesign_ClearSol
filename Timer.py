@@ -16,6 +16,9 @@ def stop_timer(h, m, s):
         time.sleep(1)
  
         total_seconds -= 1
+    flagon = 0
+    flagoff = 1
+    return flagon, flagoff;
 h = 0
 m = 2
 s = 0
