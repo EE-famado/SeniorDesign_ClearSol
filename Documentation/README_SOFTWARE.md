@@ -63,3 +63,9 @@ Import RPi.GPIO as GPIO - This library is used in the main.py in our code folder
 Import csv - The csv module is used in the plot_csv.py of our code folder of the github repository. The csv module implements classes to read and write tabular data in CSV format.
 
 Import matplotlib.pyplot as plt - This library is used in the plot_csv.py of our code folder of the github repository. The matplotlib.pyplot is a collection of command style functions that make matplotlib work like MATLAB. Each pyplot function makes some change to a figure: e.g., creates a figure, creates a plotting area in a figure, plots some lines in a plotting area, decorates the plot with labels, etc. In matplotlib.pyplot various states are preserved across function calls, so that it keeps track of things like the current figure and plotting area, and the plotting functions are directed to the current axes.
+
+# Link to previous reports/schematics
+
+[Report](https://drive.google.com/drive/u/0/folders/1YijAnvr2Zh0ikesHU6oRpiSN5gA1yLHr)
+
+[Schematics](https://drive.google.com/drive/u/0/folders/1MbMLkK_mghM-KRiB8btelP3bfiWxhIgW)

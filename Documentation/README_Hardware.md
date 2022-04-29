@@ -87,3 +87,9 @@ To adapt our cooler to its new function, holes were drilled through the top door
 On the inside of the housing, what was formerly a metal paper rack was modified in order to be able to house the completed circuit. In order to prevent any form of accidental conduction between the circuit and the metal, a piece of plexiglass was measured and cut in order to slide into the rack. The individual pieces of the circuit are then mounted to this using velcro. Wires from this circuit make connections to the solar panel itself as well as the user interface located at the front of the cooler. As a final component of the metal racking, holes were milled into the tops so that they can be used as handles to theoretically pull out and service the circuit while mounted on the racking system. The tape is to prevent the user from cutting themselves on the sharp edges left by the saw used to cut them open.
 
 The last major component of the assembly is the user IO panel. The panel, which connects to the interior of the cooler via a 1 inch diameter milled hole, houses an LCD screen used to demonstrate information regarding the circuit behavior to the user, as well as 2 LED’s, a button to cycle settings, and lastly a mechanical switch to activate or deactivate our dummy 12v load. Note however the buttons, although installed, are ultimately nonfunctional as this is what was available in the lab. Theoretically, if one wanted to wire them up to demonstrate behavior it would be fairly easy, we just chose not to waste the power on it. Lastly, the wiring for all of these components is connected to the raspberry pi located inside that UI box, with the pi being connected to our interior circuit through the previously mentioned 1inch diameter hole.
+
+# Link to previous reports/schematics
+
+[Report](https://drive.google.com/drive/u/0/folders/1YijAnvr2Zh0ikesHU6oRpiSN5gA1yLHr)
+
+[Schematics](https://drive.google.com/drive/u/0/folders/1MbMLkK_mghM-KRiB8btelP3bfiWxhIgW)
