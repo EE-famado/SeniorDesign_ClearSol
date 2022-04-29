@@ -2,7 +2,7 @@
 
 In this overview, we describe the technical layout of our circuit as well as its operational behavior, in addition to the way in which it is incorporated and housed into our overall assembly. We have attached photos of the circuit layout, assembly, and graphs regarding the behavior of our circuit below.
 
-#Circuit Description
+# Circuit Description
 
 ![Solar Panel](/images/solarpanel1.png)
 
@@ -14,7 +14,7 @@ The solar panel we are using for the project is a 30W solar panel, with an optim
 
 We are using a Phlizon PH-R15 grow lamp for our artificial light source. For our tests, it is turned to its highest setting, and placed roughly one foot above our solar panel.
 
-#Buck Converter
+# Buck Converter
 
 [LM2596 Buck Controller](https://www.amazon.com/HiLetgo-Step-down-Converter-1-25-37V-Voltmeter/dp/B00LSEBYHU/)
 
@@ -22,7 +22,7 @@ The solar panel is connected to a buck converter at the input of our power syste
 
 So, the buck converter is set to output 3.5V. This is higher than the minimum input voltage of the charge controller, but still low to optimize performance.
 
-#Supercapacitor Charge controller
+# Supercapacitor Charge controller
 
 [TI BQ25173](https://www.ti.com/product/BQ25173)
 
@@ -30,17 +30,17 @@ The supercap charge controller charges the supercapacitor bank up to a voltage o
 
 For this design we are using this controller as installed on an evaluation board from Texas Instruments. There are two settings for charge current on the controller. A fixed 400mA, and an adjustable charge current from 15mA to 800mA. The charge current was tuned to be 370mA, which drew the most power from our panel before it started to be pulled low by too much load.
 
-#Supercapacitors
+# Supercapacitors
 
 [Kyocera AVX SCCY60B407SNB 400F Supercapacitors](https://www.mouser.com/ProductDetail/Kyocera-AVX/SCCY60B407SNB?qs=bAKSY%2FctAC5fL6o%2Fe157YA%3D%3D)
 
 We are utilizing a bank of four 400F supercapacitors connected in parallel, for a total capacitance of 1600F. The main concern with this bank is a short circuit, which can result in very large discharge currents and dangerous conditions as a result. There are two main mitigations against this in the design. First, the supercapacitor terminals are covered to prevent shorts across the terminals. Second, the connection from the supercapacitor bank to the rest of the power system is fused with a 5A fast acting fuse.
 
-#Relay
+# Relay
 
 This is the primary control element placed in the power circuit. It connects the supercapacitor bank to the primary boost converter. This allows the whole load side of the system to be shut off when the EDS is not being used, increasing overall efficiency. A relay was chosen mainly for simplicity in interfacing with our Raspberry Pi. An option that could be implemented later on would be to instead turn on the primary boost converter directly. It has an enable pin, which could be connected to/controlled by the Raspberry Pi.
 
-#Primary boost Converter
+# Primary boost Converter
 
 [TI TPS61022](https://www.mouser.com/new/texas-instruments/ti-tps61022-converters/?gclid=Cj0KCQjwma6TBhDIARIsAOKuANxVnfk3HlMo2V_M8QLFp7y296KK6AfBvFQMPAUdqdjZADcjVMwiP-IaAtI0EALw_wcB)
 
@@ -48,17 +48,17 @@ The primary boost converter connects to the supercapacitor bank, and boosts the 
 
 This converter, as used on our project, is implemented on an evaluation board from Texas Instruments. It is configured to have a constant output voltage of 5V.
 
-#Secondary boost converter
+# Secondary boost converter
 
 [Boost converter](https://www.amazon.com/Aceirmc-Current-Converter-Adjustable-Regulator/dp/B082XQC2DS/)
 
 The secondary boost converter connects to the output of the primary boost converter. Its purpose is to boost the 5V output from the primary boost converter up to the desired load voltage of 12V. It has an adjustable output voltage, and as such can be adjusted to suit a different load requirements if need be.
 
-#Simulated EDS load
+# Simulated EDS load
 
 Since we did not have access to an actual EDS and accompanying power supply for this project, we constructed a bank of resistors to replicate the power draw of the EDS, to the best of our knowledge of its operation. The EDS draws 1.3W off of a 12V DC bus during operation, so we constructed a resistor bank of roughly 110 Ohms, with the capability to dissipate 1.3W safely. This bank is connected to the output of the secondary boost converter.
 
-#Power Sensors
+# Power Sensors
 
 [INA260](https://www.adafruit.com/product/4226)
 
