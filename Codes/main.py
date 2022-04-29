@@ -69,17 +69,6 @@ try:
             lcd.message = "Voltage:" + str(v4) + "V \n" + "Current:" + str(i4) + "mA"
             print("Supercapacitor output Current4: %.2f mA Voltage: %.2f V  Power: %.2f mW \n" % (i4, v4, p4))
         
-#         Activates/ Deactivates EDS based timer     
-#         if ((timeEDS - start) % 2000 == 0):
-#             GPIO.output(26, False)
-#             print('EDS is turned on')
-#             lcd.clear()
-#             stop_timer(lcd)
-#             GPIO.output(26, True)
-#             print('EDS is turned off')
-#             lcd.clear()
-#             lcd.message = "EDS deactivated"
-        
         if flagon == 0:
             state = 1
             flagon = 1
