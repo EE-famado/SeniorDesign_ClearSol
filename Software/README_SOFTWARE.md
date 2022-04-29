@@ -4,7 +4,6 @@ In this overview we describe at a high level the functionality of the code that 
 
 Our folder that contains all of our python code is “SeniorDesign_ClearSol/Codes/”, here we have all of our functions and our main.py, which is the main script to run our project. At a high level our code does 3 main things, samples data from the INA260 power sensors, allows for user input when they flip the switch or press the button, and it allows us to write the data to a CSV file to analyze later/ display the data on the LCD screen.
 
----
 
 # Module Description
 
@@ -40,7 +39,7 @@ sudo apt install python3-package_name if using Python3.
  pip install python-package_name or sudo pip3 install python-package_name if using Python3.
 ```
  Pip is installed on the raspberry pi OS by default but if it is not installed then
- 
+
  ```
  sudo apt install python-pip.
  ```
