@@ -23,3 +23,44 @@ Our folder that contains all of our python code is “SeniorDesign_ClearSol/Code
 ![Software flow chart](/images/softwareflowchart.png)
 
 Chart of our overall software
+
+# Dev/Build Information
+
+The following lists below are of the libraries installed and used in this project. Most of these libraries and modules are by default installed in the raspberry pi 4. If you are missing any of these in your pi you can install them using
+
+```
+sudo apt install python-package_name
+or  
+sudo apt install python3-package_name if using Python3.
+```
+
+ Else, you can use
+
+ ```
+ pip install python-package_name or sudo pip3 install python-package_name if using Python3.
+```
+ Pip is installed on the raspberry pi OS by default but if it is not installed then
+ 
+ ```
+ sudo apt install python-pip.
+ ```
+
+Import board - This module is used in LCD.py and main.py in our code folder of the github repository. The board module contains constants for the pins on a specific board. The board module in CircuitPython for a different board will have different constants specific to that board. The user does not have to tell CircuitPython what board it is running on, it knows. The board module is the safest, most reliable way to use your board's pins. It allows you to not worry about what MCU pins the board pins are connected to.
+
+Import digitalio - This module is used in LCD.py in our code folder of the github repository. The digitalio module contains classes to provide access to basic digital IO.
+
+Import adafruit_character_lcd.character_lcd as characterlcd - This module is used in LCD.py in our code folder of the github repository. Module for interfacing with monochromatic character LCDs.
+
+Import adafruit_ina260 - This library is used in calc_sensor_values.py, check_sensors.py, and main.py in our git repository. On supported GNU/Linux systems like the Raspberry Pi, you can install the driver locally from PyPI. To install this driver for current users use: pip3 install adafruit-circuitpython-ina260 or if that doesn’t work install it system-wide by using: sudo pip3 install adafruit-circuitpython-ina260.
+
+From csv import writer - This library is used in csv_code.py in our code folder of the github repository. The csv module implements classes to read and write tabular data in CSV format. In this case we imported only the write() method from the module. It returns a writer object responsible for converting the user’s data into delimited strings on the given file-like object. A CSV file can be any object with a write() method.
+
+From time import sleep - This module is used in fsm.py and main.py in our code folder of the github repository. The time module has several functions for time-related tasks but the focus is only on the sleep() method from the timer module. The sleep() function suspends (waits) execution of the current thread for a given number of seconds.
+
+Import time - This library is used in the main.py in our code folder of the github repository. The module provides several time related functions.
+
+Import RPi.GPIO as GPIO - This library is used in the main.py in our code folder of the github repository. It provides basic interactions with the GPIO pins, but no implementation of any connection protocol yet.
+
+Import csv - The csv module is used in the plot_csv.py of our code folder of the github repository. The csv module implements classes to read and write tabular data in CSV format.
+
+Import matplotlib.pyplot as plt - This library is used in the plot_csv.py of our code folder of the github repository. The matplotlib.pyplot is a collection of command style functions that make matplotlib work like MATLAB. Each pyplot function makes some change to a figure: e.g., creates a figure, creates a plotting area in a figure, plots some lines in a plotting area, decorates the plot with labels, etc. In matplotlib.pyplot various states are preserved across function calls, so that it keeps track of things like the current figure and plotting area, and the plotting functions are directed to the current axes.
